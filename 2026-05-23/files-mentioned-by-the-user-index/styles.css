@@ -2035,7 +2035,6 @@ h3 {
 
 .workflow-spoiler {
   position: relative;
-  margin-top: 16px;
   padding: 12px;
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 14px 14px,
@@ -2044,32 +2043,20 @@ h3 {
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.34);
 }
 
-.workflow-spoiler::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 58px;
-  z-index: 2;
-  height: 190px;
-  pointer-events: none;
-  background: linear-gradient(180deg, transparent, rgba(36, 36, 42, 0.96) 68%, rgba(36, 36, 42, 1));
-  opacity: 1;
-  transition: opacity 180ms ease;
-}
-
-.workflow-spoiler.is-open::after {
-  opacity: 0;
-}
-
 .workflow-spoiler-body {
-  max-height: 310px;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  transition: max-height 260ms ease;
+  transition: max-height 260ms ease, opacity 180ms ease;
 }
 
 .workflow-spoiler.is-open .workflow-spoiler-body {
   max-height: 1500px;
+  opacity: 1;
+}
+
+.workflow-spoiler-body .workflow-lead {
+  margin-bottom: 16px;
 }
 
 .workflow-detail-grid {
@@ -2104,7 +2091,7 @@ h3 {
   z-index: 3;
   width: 100%;
   min-height: 42px;
-  margin-top: 12px;
+  margin-top: 0;
   color: #101010;
   background: var(--acid);
   border: 1px solid #101010;
@@ -2119,6 +2106,10 @@ h3 {
 .workflow-spoiler-toggle:hover,
 .workflow-spoiler-toggle:focus-visible {
   box-shadow: 0 0 0 1px #fff, 0 0 24px rgba(200, 241, 53, 0.46), 4px 4px 0 var(--shadow);
+}
+
+.workflow-spoiler.is-open .workflow-spoiler-toggle {
+  margin-top: 12px;
 }
 
 .production-experience {
@@ -2845,8 +2836,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .workflow-spoiler-body {
-    max-height: 380px;
+  .workflow-spoiler.is-open .workflow-spoiler-body {
+    max-height: 1800px;
   }
 
   .metrics {
