@@ -2811,3 +2811,116 @@ button:hover *,
 .fan-card:hover * {
   cursor: var(--cursor-pixel-active) !important;
 }
+
+/* Compact portfolio scale */
+body {
+  font-size: 13px;
+}
+
+.shell {
+  width: min(100% - 40px, 1040px);
+}
+
+.topbar {
+  padding: 8px;
+}
+
+.brand-name {
+  font-size: 14px;
+}
+
+.nav a,
+.pixel-button {
+  min-height: 30px;
+  padding: 6px 11px;
+}
+
+.hero {
+  min-height: auto;
+  padding: 36px 0 24px;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 82px);
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.section {
+  padding: 36px 0;
+}
+
+.hero-collage {
+  min-height: 450px;
+  padding: 8px 8px 92px;
+  grid-auto-rows: 36px;
+}
+
+.hero-label {
+  padding: 10px;
+}
+
+.hero-label strong {
+  font-size: 16px;
+}
+
+.case-card,
+.production-panel {
+  padding: 10px;
+}
+
+.production-copy {
+  padding: 8px;
+}
+
+.production-visual,
+.creative-grid,
+.audit-table {
+  min-height: 230px;
+  padding: 9px;
+}
+
+.comparison-stage {
+  min-height: 360px;
+}
+
+.comparison-stage.portrait {
+  min-height: 440px;
+}
+
+.cta-band {
+  padding: 13px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+
+  .shell {
+    width: min(100% - 18px, 1040px);
+  }
+
+  .hero {
+    padding: 22px 0 16px;
+  }
+
+  .section {
+    padding: 26px 0;
+  }
+
+  .hero-collage {
+    grid-auto-rows: 36px;
+    padding-bottom: 82px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 13vw, 60px);
+  }
+
+  h2 {
+    font-size: clamp(26px, 9vw, 40px);
+  }
+}
