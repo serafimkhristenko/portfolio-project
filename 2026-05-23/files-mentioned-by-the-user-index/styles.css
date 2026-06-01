@@ -1888,7 +1888,7 @@ h2 {
 .ai-video-card video {
   display: block;
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   background: #050505;
   border: 1px solid var(--line);
