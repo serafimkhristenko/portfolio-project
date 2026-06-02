@@ -775,6 +775,38 @@ h1 {
   translate: 0 80px;
 }
 
+.hero-board-ai {
+  --tilt: rotate(-3deg);
+  grid-column: 5 / span 2;
+  grid-row: 6 / span 3;
+  margin: -8px -12px 12px 8px;
+  z-index: 9;
+}
+
+.hero-board-aj {
+  --tilt: rotate(4deg);
+  grid-column: 5 / span 2;
+  grid-row: 6 / span 3;
+  margin: 18px -18px -12px 18px;
+  z-index: 10;
+}
+
+.hero-board-ak {
+  --tilt: rotate(-2deg);
+  grid-column: 6 / span 1;
+  grid-row: 7 / span 2;
+  margin: -10px -8px 8px 4px;
+  z-index: 11;
+}
+
+.hero-board-al {
+  --tilt: rotate(3deg);
+  grid-column: 5 / span 1;
+  grid-row: 8 / span 2;
+  margin: -6px 8px 10px -10px;
+  z-index: 10;
+}
+
 .hero-cover-a {
   --tilt: rotate(-4deg);
   left: 4%;
