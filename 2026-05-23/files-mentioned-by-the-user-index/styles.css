@@ -1957,9 +1957,10 @@ h3 {
 }
 
 .ai-video-board {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
   gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .ai-video-card {
@@ -1969,12 +1970,13 @@ h3 {
   background: rgba(10, 10, 13, 0.74);
   border: 1px solid rgba(200, 241, 53, 0.28);
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.42);
+  flex: 0 0 auto;
 }
 
 .ai-video-card video {
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: 220px;
+  aspect-ratio: 9 / 16;
   object-fit: contain;
   background: #050505;
   border: 1px solid var(--line);
