@@ -1747,9 +1747,9 @@ h3 {
 .cv-card,
 .experience-item,
 .project-tile {
-  background: rgba(45, 45, 50, 0.92);
+  background: transparent;
   border: 1px solid var(--line);
-  box-shadow: 6px 6px 0 var(--shadow);
+  box-shadow: none;
 }
 
 .tool-card {
