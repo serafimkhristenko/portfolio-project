@@ -184,7 +184,16 @@ if (canvas) {
     ctx.shadowBlur = 0;
   }
 
-  function draw() {
+  const FPS = 24;
+  const FRAME_MS = 1000 / FPS;
+  let lastFrameTime = 0;
+
+  function draw(timestamp) {
+    if (timestamp - lastFrameTime < FRAME_MS) {
+      requestAnimationFrame(draw);
+      return;
+    }
+    lastFrameTime = timestamp;
     ctx.clearRect(0, 0, width, height);
     drawNodes();
     drawWorms();
