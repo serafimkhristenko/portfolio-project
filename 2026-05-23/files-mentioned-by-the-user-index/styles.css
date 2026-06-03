@@ -1752,6 +1752,19 @@ h3 {
   box-shadow: none;
 }
 
+.cv-card:not(.cv-card--flat),
+.experience-item:not(.experience-item--flat) {
+  background: rgba(45, 45, 50, 0.92);
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.cv-card--flat,
+.experience-item--flat {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
 .tool-card {
   min-height: 162px;
   padding: 16px;
